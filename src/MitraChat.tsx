@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Heart, Moon, Sun, Sparkles, Leaf, Wind } from 'lucide-react';
 
+
 interface Message {
   id: string;
   text: string;
@@ -112,7 +113,7 @@ const MitraChat = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch('${process.env.NEXT_PUBLIC_API_URL}/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
