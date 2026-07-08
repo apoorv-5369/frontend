@@ -1,0 +1,70 @@
+/* src/MoodLogger.css */
+
+.mood-logger-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.mood-logger-container h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.emoji-selector {
+  margin: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.emoji {
+  font-size: 50px;
+  cursor: pointer;
+  padding: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+}
+
+/* New style: This will fade out the emojis that are NOT selected */
+.emoji.faded {
+  opacity: 0.4;
+  transform: scale(0.8);
+}
+
+textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-bg);
+  color: var(--primary-text);
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: scale(1.05);
+}

@@ -1,0 +1,39 @@
+:root {
+  --background: #1A202C;       /* Dark Slate Blue */
+  --surface-bg: #2D3748;       /* Lighter Slate (for cards) */
+  --primary-text: #E2E8F0;      /* Light Greyish Blue */
+  --secondary-text: #A0AEC0;    /* Medium Grey */
+  --accent-color: #63B3ED;      /* Vibrant Blue */
+  --border-color: #4A5568;      /* Subtle Border Grey */
+}
+
+html, body, #root {
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  position: static !important; /* Prevents absolute positioning issues */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary-text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
