@@ -123,7 +123,12 @@ const MitraChat = () => {
         })
       });
 
-      if (!response.ok) throw new Error('Failed to send message');
+      if (!response.ok) {
+        const errorBody = await response.text();
+        console.error('Response status:', response.status);
+        console.error('Response body:', errorBody);
+        throw new Error('Failed to send message');
+      }
       
       const data = await response.json();
       
