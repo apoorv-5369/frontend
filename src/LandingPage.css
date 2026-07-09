@@ -63,12 +63,13 @@
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  will-change: transform;
 }
 
 .card-heading {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold; 
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   color: var(--primary-text);
   /* The BlurText component is a flex container, this helps center it */
   display:flex;
@@ -82,8 +83,9 @@
 }
 
 .scroll-stack-card p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--secondary-text);
+  text-align: center;
 }
 
 .scroll-stack-card a {
@@ -93,13 +95,13 @@
   text-decoration: none;
   color: inherit;
   border-radius: 40px;
+}
+
+
+.scroll-stack-card:hover {
+  background-color: rgba(99, 179, 237, 0.1);
   transition: background-color 0.3s;
 }
-
-.scroll-stack-card a:hover {
-  background-color: rgba(99, 179, 237, 0.1);
-}
-
 .ascii-section {
   height: 80vh; /* Give the section a height */
   width: 100%;
